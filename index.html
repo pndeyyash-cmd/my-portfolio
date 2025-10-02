@@ -6,12 +6,7 @@
     <title>Yash Vardhan Pandey | Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        /* Simple CSS for dropdown functionality */
-        .group:hover .group-hover\:block {
-            display: block;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -35,16 +30,16 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Projects</a>
                 
-                <!-- Updated Resume Button with Dropdown -->
-                <div class="relative inline-block text-left group">
-                    <button class="btn btn-secondary">
-                        Resume
+                <!-- NEW CLICKABLE RESUME DROPDOWN -->
+                <div class="relative inline-block text-left">
+                    <button id="resume-button" class="btn btn-primary">
+                        <span>Resume</span>
                         <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block">
-                        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                            <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">View Resume</a>
-                            <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Download Resume</a>
+                    <div id="resume-dropdown" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 hidden">
+                        <div class="py-2 px-2 space-y-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="btn btn-primary block w-full text-center" role="menuitem">View Resume</a>
+                            <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="btn btn-primary block w-full text-center" role="menuitem">Download Resume</a>
                         </div>
                     </div>
                 </div>
@@ -165,6 +160,24 @@
             <p class="copyright">&copy; 2025 Yash Vardhan Pandey. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const resumeButton = document.getElementById('resume-button');
+            const resumeDropdown = document.getElementById('resume-dropdown');
+
+            resumeButton.addEventListener('click', function() {
+                resumeDropdown.classList.toggle('hidden');
+            });
+
+            // Close dropdown if clicking anywhere else on the page
+            window.addEventListener('click', function(e) {
+                if (!resumeButton.contains(e.target) && !resumeDropdown.contains(e.target)) {
+                    resumeDropdown.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
