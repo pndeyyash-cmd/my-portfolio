@@ -6,6 +6,12 @@
     <title>Yash Vardhan Pandey | Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Simple CSS for dropdown functionality */
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,7 +34,21 @@
             <p class="tagline">Building scalable backend systems and dynamic user experiences, from server logic to pixel-perfect UIs.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Projects</a>
-                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" class="btn btn-secondary" download>Download Resume</a>
+                
+                <!-- Updated Resume Button with Dropdown -->
+                <div class="relative inline-block text-left group">
+                    <button class="btn btn-secondary">
+                        Resume
+                        <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block">
+                        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">View Resume</a>
+                            <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </header>
