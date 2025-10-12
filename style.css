@@ -1,13 +1,13 @@
 /* --- Global Styles & Variables --- */
 :root {
-      --primary-color: #00aaff; /* A bright, professional blue accent */
+    --primary-color: #00aaff; /* A bright, professional blue accent */
     --background-color: #121212; /* Fallback color */
     --surface-color: rgba(22, 22, 22, 0.85); /* Semi-transparent dark grey for cards */
     --text-color: #ffffff; /* White text for high contrast */
     --text-secondary-color: #cccccc; /* Lighter grey for secondary text */
 }
 body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     
     /* --- Background Image Setup --- */
     background-image: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('background.jpg');
@@ -257,21 +257,6 @@ p {
     margin-top: 1rem;
 }
 
-/* --- Achievements Section --- */
-#achievements ul {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-#achievements li {
-    background: var(--surface-color);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-}
-
 /* --- Footer --- */
 footer {
     background-color: var(--surface-color);
@@ -299,6 +284,61 @@ footer h2 {
     font-size: 0.9rem;
     color: var(--text-secondary-color);
 }
+
+/* --- START: NEW CERTIFICATES VIEW CSS ---
+   This is the new code to fix your certificate layout.
+*/
+#certificates-view .container {
+    max-width: 1200px; /* Allow a wider container for the certificates page */
+}
+
+.certificates-grid {
+  display: grid;
+  /* Creates a responsive grid. Adjust minmax(350px, 1fr) for different card sizes. */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem; /* Space between certificate cards */
+  text-align: left;
+}
+
+.certificate-card {
+  background: var(--surface-color);
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the image respects the border radius */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  color: var(--text-secondary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  /* This creates the fixed 4:3 ratio you wanted */
+  aspect-ratio: 4 / 3;
+  /* This ensures the entire image fits without stretching or being cut off */
+  object-fit: contain;
+  background-color: #2a2a2a; /* A dark background for any empty space if image ratios differ */
+}
+
+.certificate-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin: 1.5rem 1.5rem 0.5rem;
+}
+
+.certificate-card p {
+  font-size: 0.95rem;
+  padding: 0 1.5rem 1.5rem;
+  margin-bottom: 0;
+}
+
+/* --- END: NEW CERTIFICATES VIEW CSS --- */
+
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
