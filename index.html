@@ -12,40 +12,51 @@
         .view {
             transition: opacity 0.5s ease-in-out;
         }
+        /* Smooth transition for modal background */
+        #certificate-modal .bg-opacity-75 {
+             transition: background-opacity 0.3s ease-out;
+        }
+         /* Smooth transition for modal content scaling */
+        #certificate-modal .transform {
+             transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
 
     <div id="main-view" class="view">
-        <nav class="navbar">
-            <div class="container">
-                <a href="#" class="logo">Yash Vardhan Pandey</a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certificates">Certificates</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+        <nav class="navbar bg-white dark:bg-gray-900 shadow-md fixed w-full z-10 top-0 transition-colors duration-300">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <a href="#" class="logo text-xl font-bold text-blue-600 dark:text-blue-400">Yash Vardhan Pandey</a>
+                <ul class="nav-links hidden md:flex space-x-6 font-medium">
+                    <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">About</a></li>
+                    <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a></li>
+                    <li><a href="#certificates" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Certificates</a></li>
+                    <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a></li>
                 </ul>
+                 <button class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </nav>
 
-        <header class="hero">
-            <div class="container">
-                <h1>Yash Vardhan Pandey</h1>
-                <h2>Full-Stack Developer & Backend Engineer</h2>
-                <p class="tagline">Building scalable backend systems and dynamic user experiences, from server logic to pixel-perfect UIs.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Projects</a>
+        <header class="hero pt-24 pb-16 md:pt-32 md:pb-24 text-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Yash Vardhan Pandey</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400 mb-6">Full-Stack Developer & Backend Engineer</h2>
+                <p class="tagline text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">Building scalable backend systems and dynamic user experiences, from server logic to pixel-perfect UIs.</p>
+                <div class="hero-buttons flex justify-center space-x-4">
+                    <a href="#projects" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition transform hover:-translate-y-1">View My Projects</a>
                     <div class="relative inline-block text-left">
-                        <button id="resume-button" class="btn btn-primary">
+                        <button id="resume-button" class="btn btn-secondary bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-bold py-3 px-6 rounded-lg shadow inline-flex items-center transition transform hover:-translate-y-1">
                             <span>Resume</span>
-                            <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="resume-dropdown" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 hidden">
+                        <div id="resume-dropdown" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 hidden z-20">
                             <div class="py-2 px-2 space-y-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="btn btn-primary block w-full text-center" role="menuitem">View Resume</a>
-                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="btn btn-primary block w-full text-center" role="menuitem">Download Resume</a>
+                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block w-full text-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" role="menuitem">View Resume</a>
+                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block w-full text-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" role="menuitem">Download Resume</a>
                             </div>
                         </div>
                     </div>
@@ -54,170 +65,306 @@
         </header>
 
         <main>
-            <section id="about" class="container">
-                <h2>About Me</h2>
-                <p>I'm a third-year BCA student with a deep passion for building complete, functional web applications. My journey into tech is driven by a desire to solve real-world problems through clean, efficient code. My coursework and personal projects have provided a strong foundation in both the art of creating intuitive user interfaces and the science of architecting robust backend systems.</p>
-                <p>I thrive on challenges and am constantly exploring new technologies. My project work, especially with the MERN stack and AI integration, demonstrates my ability to take a concept from idea to deployment.</p>
-                <p>I am actively seeking opportunities to contribute to a forward-thinking team, where I can apply my skills and continue to grow as a software engineer.</p>
-            </section>
-            
-            <section id="projects" class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Vardhan's Wear - Full-Stack E-Commerce PWA</h3>
-                        <p class="project-tagline">A robust, mobile-first e-commerce platform built with the MERN stack.</p>
-                        <p>This Progressive Web App features secure JWT authentication, a dynamic shopping cart with real-time stock validation, a protected Admin Dashboard for inventory management, and integration with the Razorpay payment gateway for live transactions. Optimized with Cloudinary for media management.</p>
-                        <div class="tech-stack">
-                            <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>Razorpay</span><span>Cloudinary</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://vardhan-wears.vercel.app" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/pndeyyash-cmd/Vardhan-Wears-frontend" target="_blank" class="btn">Frontend Repo</a>
-                            <a href="https://github.com/pndeyyash-cmd/vardhan-wears-backend" target="_blank" class="btn">Backend Repo</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Neighborly - Real-Time Community Help Platform</h3>
-                        <p class="project-tagline">A full-stack MERN app for hyperlocal assistance with real-time chat and a karma system.</p>
-                        <p>This application allows users to post and fulfill real-time requests for help. It features a live community board, an integrated chat system powered by Socket.IO for instant coordination, and a "Karma" reputation system to build trust among users.</p>
-                        <div class="tech-stack">
-                            <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Socket.IO</span><span>Tailwind CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://neighborly-app-one.vercel.app/" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/pndeyyash-cmd/neighborly-app" target="_blank" class="btn">View on GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Neha's Restaurant - Full-Stack Management System</h3>
-                        <p class="project-tagline">A complete digital solution for restaurant management, from customer booking to admin control.</p>
-                        <p>This full-stack application features a customer-facing UI for menu browsing and table reservations, alongside a secure admin panel with two-factor authentication (Password + OTP). The admin dashboard provides full CRUD functionality for managing tables, menu, and inventory.</p>
-                        <div class="tech-stack">
-                            <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>Twilio</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://nehas-restaurant-frontend.vercel.app" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/pndeyyash-cmd/nehas-restaurant-frontend" target="_blank" class="btn">Frontend Repo</a>
-                            <a href="https://github.com/pndeyyash-cmd/nehas-restaurant-backend" target="_blank" class="btn">Backend Repo</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>AI Content Detector</h3>
-                        <p class="project-tagline">A full-stack web application to detect AI-generated text from various file formats.</p>
-                        <p>This application provides a modern, user-friendly interface for users to analyze text content. It supports direct text input as well as file uploads (PDF, Word), leveraging a Python/Flask backend to perform the analysis and return a detailed probability score.</p>
-                        <div class="tech-stack">
-                            <span>Next.js</span><span>React.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Flask</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ai-content-detector-phi.vercel.app" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/pndeyyash-cmd/ai-content-detector" target="_blank" class="btn">View on GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Full-Stack URL Shortener</h3>
-                        <p class="project-tagline">A deployed web application to create short, shareable links from long URLs.</p>
-                        <p>This is an end-to-end project featuring a Flask backend that handles link generation, redirection, and data persistence using an SQLite database. The application is deployed live on Render.</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>Flask</span><span>SQLite</span><span>Render</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://codealphataskurl-shortner-yfmh.onrender.com" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/pndeyyash-cmd/CodeAlpha_URL_Shortener" target="_blank" class="btn">View on GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>QR Code Generator</h3>
-                        <p class="project-tagline">A sleek and modern tool to instantly convert any URL into a scannable QR code.</p>
-                        <p>This is a single-page frontend application built with HTML, Tailwind CSS, and JavaScript, featuring real-time QR code generation and download functionality.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span><span>Tailwind CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://pndeyyash-cmd.github.io/qr-code-generator/" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/pndeyyash-cmd/qr-code-generator" target="_blank" class="btn">View on GitHub</a>
-                        </div>
-                    </div>
+            <section id="about" class="container mx-auto px-4 py-16">
+                <h2 class="section-title text-3xl font-bold text-center mb-12">About Me</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 space-y-6 leading-relaxed">
+                    <p>I'm a third-year BCA student with a deep passion for building complete, functional web applications. My journey into tech is driven by a desire to solve real-world problems through clean, efficient code. My coursework and personal projects have provided a strong foundation in both the art of creating intuitive user interfaces and the science of architecting robust backend systems.</p>
+                    <p>I thrive on challenges and am constantly exploring new technologies. My project work, especially with the MERN stack and AI integration, demonstrates my ability to take a concept from idea to deployment.</p>
+                    <p>I am actively seeking opportunities to contribute to a forward-thinking team, where I can apply my skills and continue to grow as a software engineer.</p>
                 </div>
             </section>
             
-            <section id="certificates" class="container text-center">
-                <h2>Certificates & Achievements</h2>
-                <p class="mb-4">I actively participate in competitions to sharpen my skills. Click below to view my recognitions.</p>
-                <button onclick="showView('certificates-view')" class="btn btn-primary">View My Certificates & Achievements</button>
+            <section id="projects" class="container mx-auto px-4 py-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+                <h2 class="section-title text-3xl font-bold text-center mb-12">Featured Projects</h2>
+                <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="project-card bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Vardhan's Wear - Full-Stack E-Commerce PWA</h3>
+                            <p class="project-tagline text-blue-600 dark:text-blue-400 font-medium mb-4">A robust, mobile-first e-commerce platform built with the MERN stack.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">This Progressive Web App features secure JWT authentication, a dynamic shopping cart with real-time stock validation, a protected Admin Dashboard, Razorpay payment gateway, and Cloudinary for media.</p>
+                            <div class="tech-stack flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">React</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Node.js</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Express.js</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">MongoDB</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Tailwind CSS</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Razorpay</span>
+                            </div>
+                            <div class="project-links flex space-x-3">
+                                <a href="https://vardhan-wears.vercel.app" target="_blank" class="btn-sm bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition">Live Demo</a>
+                                <a href="https://github.com/pndeyyash-cmd/Vardhan-Wears-frontend" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">Frontend</a>
+                                <a href="https://github.com/pndeyyash-cmd/vardhan-wears-backend" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">Backend</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="p-6">
+                             <h3 class="text-xl font-bold mb-2">Neighborly - Real-Time Community Help</h3>
+                            <p class="project-tagline text-blue-600 dark:text-blue-400 font-medium mb-4">A full-stack MERN app for hyperlocal assistance with real-time chat.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">Features a live community board for posting requests, an integrated chat system powered by Socket.IO for instant coordination, and a "Karma" reputation system.</p>
+                            <div class="tech-stack flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">React</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Node.js</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">MongoDB</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Socket.IO</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links flex space-x-3">
+                                <a href="https://neighborly-app-one.vercel.app/" target="_blank" class="btn-sm bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition">Live Demo</a>
+                                <a href="https://github.com/pndeyyash-cmd/neighborly-app" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Neha's Restaurant - Management System</h3>
+                            <p class="project-tagline text-blue-600 dark:text-blue-400 font-medium mb-4">A complete digital solution from customer booking to admin control.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">Customer-facing UI for reservations, alongside a secure admin panel with 2FA (Password + OTP via Twilio) for full CRUD management of inventory and tables.</p>
+                            <div class="tech-stack flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">React</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Node.js</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">MongoDB</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Twilio</span>
+                            </div>
+                            <div class="project-links flex space-x-3">
+                                <a href="https://nehas-restaurant-frontend.vercel.app" target="_blank" class="btn-sm bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition">Live Demo</a>
+                                <a href="https://github.com/pndeyyash-cmd/nehas-restaurant-frontend" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">Frontend</a>
+                                <a href="https://github.com/pndeyyash-cmd/nehas-restaurant-backend" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">Backend</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">AI Content Detector</h3>
+                            <p class="project-tagline text-blue-600 dark:text-blue-400 font-medium mb-4">Full-stack web app to detect AI-generated text.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">Modern UI for text analysis supporting direct input and file uploads (PDF, Word). Leverages a Python/Flask backend for analysis and scoring.</p>
+                            <div class="tech-stack flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Next.js</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">TypeScript</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Flask</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links flex space-x-3">
+                                <a href="https://ai-content-detector-phi.vercel.app" target="_blank" class="btn-sm bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition">Live Demo</a>
+                                <a href="https://github.com/pndeyyash-cmd/ai-content-detector" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="project-card bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Full-Stack URL Shortener</h3>
+                            <p class="project-tagline text-blue-600 dark:text-blue-400 font-medium mb-4">Create short, shareable links from long URLs.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">End-to-end project with a Flask backend for link generation and redirection, using SQLite for data persistence. Deployed on Render.</p>
+                            <div class="tech-stack flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Python</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Flask</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">SQLite</span>
+                            </div>
+                            <div class="project-links flex space-x-3">
+                                <a href="https://codealphataskurl-shortner-yfmh.onrender.com" target="_blank" class="btn-sm bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition">Live Demo</a>
+                                <a href="https://github.com/pndeyyash-cmd/CodeAlpha_URL_Shortener" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">QR Code Generator</h3>
+                            <p class="project-tagline text-blue-600 dark:text-blue-400 font-medium mb-4">Instantly convert any URL into a scannable QR code.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">Single-page frontend application featuring real-time QR code generation and download functionality.</p>
+                            <div class="tech-stack flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">Tailwind CSS</span>
+                                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-full">JavaScript</span>
+                            </div>
+                            <div class="project-links flex space-x-3">
+                                <a href="https://pndeyyash-cmd.github.io/qr-code-generator/" target="_blank" class="btn-sm bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition">Live Demo</a>
+                                <a href="https://github.com/pndeyyash-cmd/qr-code-generator" target="_blank" class="btn-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2 px-4 rounded text-sm transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <section id="certificates" class="container mx-auto px-4 py-16 text-center">
+                <h2 class="section-title text-3xl font-bold mb-8">Certificates & Achievements</h2>
+                <p class="mb-8 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">I actively participate in competitions and complete certifications to sharpen my skills and validate my knowledge. Click below to view my recognitions.</p>
+                <button onclick="showView('certificates-view')" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1">View My Certificates & Achievements</button>
             </section>
 
-            <section id="skills" class="container">
-                <h2>My Tech Stack</h2>
-                <div class="skills-grid">
+            <section id="skills" class="container mx-auto px-4 py-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+                <h2 class="section-title text-3xl font-bold text-center mb-12">My Tech Stack</h2>
+                <div class="skills-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
                       <div class="skill-category">
-                        <h3>Frontend</h3>
-                        <span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span><span>TypeScript</span><span>React.js</span><span>Next.js</span><span>Tailwind CSS</span>
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">Frontend</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">HTML5</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">CSS3</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">JavaScript (ES6+)</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">TypeScript</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">React.js</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Next.js</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Tailwind CSS</span>
+                        </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Backend</h3>
-                        <span>Node.js</span><span>Express.js</span><span>Flask</span><span>REST APIs</span><span>JSON</span><span>CORS</span>
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">Backend</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Node.js</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Express.js</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Flask</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">REST APIs</span>
+                        </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Databases</h3>
-                        <span>MongoDB</span><span>MySQL</span><span>SQLite</span>
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">Databases</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                             <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">MongoDB</span>
+                             <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">MySQL</span>
+                             <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">SQLite</span>
+                        </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Languages</h3>
-                        <span>JavaScript</span><span>Python</span><span>Java</span><span>C++</span><span>C#</span>
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">Languages</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">JavaScript</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Python</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Java</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">C++</span>
+                        </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Tools & Deployment</h3>
-                        <span>Git</span><span>GitHub</span><span>Vercel</span><span>Render</span><span>Postman</span>
+                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">Tools & Deployment</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Git</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">GitHub</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Vercel</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Render</span>
+                            <span class="skill-tag px-3 py-1 bg-white dark:bg-gray-900 rounded-full text-sm shadow-sm">Postman</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
         </main>
 
-        <footer id="contact">
-            <div class="container">
-                <h2>Let's Connect</h2>
-                <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
-                <div class="social-links">
-                    <a href="mailto:pndeyyash@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/yash-pandey-fullstack/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/pndeyyash-cmd" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.youtube.com/channel/UCS8CRyAxM0zG6hRsVUNhcEw" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <footer id="contact" class="bg-gray-900 text-white py-12 text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+                <p class="mb-8 text-lg max-w-xl mx-auto">I'm currently open to new opportunities and collaborations. Feel free to reach out via email or connect with me on social media!</p>
+                <div class="social-links flex justify-center space-x-6 mb-8">
+                    <a href="mailto:pndeyyash@gmail.com" aria-label="Email" class="hover:text-blue-400 transition transform hover:scale-110"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/yash-pandey-fullstack/" target="_blank" aria-label="LinkedIn" class="hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/pndeyyash-cmd" target="_blank" aria-label="GitHub" class="hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.youtube.com/channel/UCS8CRyAxM0zG6hRsVUNhcEw" target="_blank" aria-label="YouTube" class="hover:text-red-500 transition transform hover:scale-110"><i class="fab fa-youtube fa-2x"></i></a>
                 </div>
-                <p class="copyright">&copy; 2025 Yash Vardhan Pandey. All rights reserved.</p>
+                <p class="copyright text-gray-400 text-sm">&copy; 2025 Yash Vardhan Pandey. All rights reserved.</p>
             </div>
         </footer>
     </div>
 
-    <div id="certificates-view" class="view hidden absolute top-0 left-0 w-full bg-gray-900 bg-opacity-95" style="opacity: 0;">
-         <div class="container mx-auto px-4 py-8">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-3xl font-bold text-white">Certificates & Achievements</h2>
-                <button onclick="showView('main-view')" class="btn btn-secondary">Back to Portfolio</button>
+    <div id="certificates-view" class="view hidden fixed inset-0 w-full h-full bg-gray-900 overflow-y-auto z-20 transition-opacity duration-500" style="opacity: 0;">
+         <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 md:mb-0">Certificates & Achievements</h2>
+                <button onclick="showView('main-view')" class="btn btn-secondary bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg shadow transition flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back to Portfolio
+                </button>
             </div>
-            <div class="certificates-grid">
-                <div class="certificate-card">
-                    <img src="codealpha_certificate.png" alt="CodeAlpha Internship Certificate">
-                    <h3>Virtual Internship Program - CodeAlpha</h3>
-                    <p>Certificate of Completion for the Virtual Internship Program in Full Stack Development, demonstrating dedication and hard work.</p>
+            <div class="certificates-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="certificate-card bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('codealpha_certificate.png', 'Virtual Internship Program - CodeAlpha', 'Certificate of Completion for the Virtual Internship Program in Full Stack Development, demonstrating dedication and hard work.')">
+                    <div class="relative overflow-hidden">
+                        <img src="codealpha_certificate.png" alt="CodeAlpha Internship Certificate" class="w-full h-56 object-cover object-center transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Virtual Internship Program - CodeAlpha</h3>
+                        <p class="text-gray-300 text-sm">Certificate of Completion for the Virtual Internship Program.</p>
+                    </div>
                 </div>
-                <div class="certificate-card">
-                    <img src="lionsden.jpg" alt="Lion's Den 2.0 Certificate">
-                    <h3>Lion's Den 2.0 - 1st Position</h3>
-                    <p>Awarded for securing the 1st position in the "Lion's Den 2.0" event organized by Shambhunath Institutions.</p>
+
+                <div class="certificate-card bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('lionsden.jpg', 'Lion\'s Den 2.0 - 1st Position', 'Awarded for securing the 1st position in the \'Lion\'s Den 2.0\' event organized by Shambhunath Institutions.')">
+                    <div class="relative overflow-hidden">
+                        <img src="lionsden.jpg" alt="Lion's Den 2.0 Certificate" class="w-full h-56 object-cover object-center transition duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Lion's Den 2.0 - 1st Position</h3>
+                        <p class="text-gray-300 text-sm">Awarded for securing 1st position.</p>
+                    </div>
                 </div>
-                <div class="certificate-card">
-                    <img src="CODESTORM.jpg" alt="Codestorm 25 Certificate">
-                    <h3>Codestorm 25 - Certificate of Achievement</h3>
-                    <p>Participated in a competitive coding event fostering skills in real-time problem-solving and logical thinking.</p>
+
+                <div class="certificate-card bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('CODESTORM.jpg', 'Codestorm 25 - Certificate of Achievement', 'Participated in a competitive coding event fostering skills in real-time problem-solving and logical thinking.')">
+                     <div class="relative overflow-hidden">
+                        <img src="CODESTORM.jpg" alt="Codestorm 25 Certificate" class="w-full h-56 object-cover object-top transition duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Codestorm 25 - Achievement</h3>
+                        <p class="text-gray-300 text-sm">Competitive coding event participation.</p>
+                    </div>
                 </div>
-                <div class="certificate-card">
-                    <img src="starlightshowdown.jpg" alt="SlideStar Showdown Certificate">
-                    <h3>SlideStar Showdown - 1st Position</h3>
-                    <p>Awarded for placing 1st in a PowerPoint presentation competition, demonstrating strong communication skills.</p>
+
+                <div class="certificate-card bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('starlightshowdown.jpg', 'SlideStar Showdown - 1st Position', 'Awarded for placing 1st in a PowerPoint presentation competition, demonstrating strong communication skills.')">
+                     <div class="relative overflow-hidden">
+                        <img src="starlightshowdown.jpg" alt="SlideStar Showdown Certificate" class="w-full h-56 object-cover object-center transition duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">SlideStar Showdown - 1st Position</h3>
+                        <p class="text-gray-300 text-sm">1st place in presentation competition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificate-modal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen p-4 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity" aria-hidden="true" onclick="closeModal()"></div>
+
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div class="inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl w-full relative">
+                 <div class="absolute top-4 right-4 flex space-x-4 z-10 p-2 bg-gray-900 bg-opacity-50 rounded-full">
+                    <a id="modal-download-link" href="#" download class="text-gray-300 hover:text-white transition-colors duration-200" title="Download Certificate">
+                       <i class="fas fa-download fa-lg"></i>
+                    </a>
+                    <button onclick="closeModal()" type="button" class="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none" title="Close">
+                       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                       </svg>
+                    </button>
+               </div>
+                <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start justify-center flex-col">
+                        <div class="mt-4 w-full flex justify-center bg-gray-900 rounded-lg p-2">
+                                <img id="modal-image" src="" alt="Certificate" class="max-h-[75vh] w-auto object-contain rounded shadow-lg">
+                        </div>
+                        <div class="mt-6 text-center sm:text-left w-full">
+                            <h3 class="text-2xl leading-6 font-bold text-white" id="modal-title">
+                                </h3>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-300" id="modal-description">
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,6 +372,7 @@
 
 
     <script>
+        // View Switching Logic
         function showView(viewId) {
             const mainView = document.getElementById('main-view');
             const certificatesView = document.getElementById('certificates-view');
@@ -234,23 +382,24 @@
                 setTimeout(() => {
                     mainView.classList.add('hidden');
                     certificatesView.classList.remove('hidden');
-                    setTimeout(() => {
-                        certificatesView.style.opacity = '1';
-                        window.scrollTo(0, 0);
-                    }, 50);
+                    // Force restart of transition
+                    void certificatesView.offsetWidth; 
+                    certificatesView.style.opacity = '1';
+                    window.scrollTo(0, 0);
                 }, 500);
             } else {
                 certificatesView.style.opacity = '0';
                 setTimeout(() => {
                     certificatesView.classList.add('hidden');
                     mainView.classList.remove('hidden');
-                      setTimeout(() => {
-                        mainView.style.opacity = '1';
-                    }, 50);
+                    // Force restart of transition
+                    void mainView.offsetWidth;
+                    mainView.style.opacity = '1';
                 }, 500);
             }
         }
 
+        // Resume Dropdown Logic
         document.addEventListener('DOMContentLoaded', function() {
             const resumeButton = document.getElementById('resume-button');
             const resumeDropdown = document.getElementById('resume-dropdown');
@@ -264,6 +413,52 @@
                     resumeDropdown.classList.add('hidden');
                 }
             });
+        });
+
+        // Certificate Modal Logic
+        const modal = document.getElementById('certificate-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalDownloadLink = document.getElementById('modal-download-link');
+
+        function openModal(imageSrc, title, description) {
+            // Populate data
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalDownloadLink.href = imageSrc;
+
+            // Show modal
+            modal.classList.remove('hidden');
+            // Add a small delay to allow the browser to render the hidden removal before animating opacity
+            setTimeout(() => {
+                 modal.querySelector('.bg-opacity-75').classList.add('opacity-100');
+                 modal.querySelector('.transform').classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
+                 modal.querySelector('.transform').classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            // Animate out
+             modal.querySelector('.bg-opacity-75').classList.remove('opacity-100');
+             modal.querySelector('.transform').classList.remove('opacity-100', 'translate-y-0', 'sm:scale-100');
+             modal.querySelector('.transform').classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+
+            // Hide after animation
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImage.src = ''; // Clear src
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }, 300);
+        }
+
+        // Close modal on ESC key press
+        document.addEventListener('keydown', function(e) {
+            if(e.key === "Escape" && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
         });
     </script>
 
