@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Vardhan Pandey | Full-Stack Developer</title>
+    <title>Yash Vardhan Pandey | Full-Stack Developer & Founder</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,6 +17,16 @@
         #certificate-modal .transform {
              transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
+        .business-glow { 
+             box-shadow: 0 0 20px rgba(212, 165, 116, 0.2); 
+             border: 1px solid rgba(212, 165, 116, 0.3); 
+        }
+        /* RESPONSIVE TYPOGRAPHY FIX (No more overlapping text) */
+        .hero-title { line-height: 1.1; word-spacing: -2px; }
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2.75rem !important; line-height: 1.15 !important; margin-bottom: 0.75rem; }
+            .hero-subtitle { font-size: 1.25rem !important; line-height: 1.4 !important; }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
@@ -27,33 +37,42 @@
                 <a href="#" class="logo text-xl font-bold text-blue-600 dark:text-blue-400">Yash Vardhan Pandey</a>
                 <ul class="nav-links hidden md:flex space-x-6 font-medium">
                     <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">About</a></li>
+                    <li><a href="#business" class="hover:text-blue-600 dark:hover:text-blue-400 transition text-blue-500 font-bold">Business</a></li>
                     <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a></li>
                     <li><a href="#certificates" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Certificates</a></li>
                     <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a></li>
                     <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a></li>
                 </ul>
-                 <button class="md:hidden focus:outline-none">
+                 <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
+            <div id="mobile-nav" class="hidden md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800 p-4 space-y-4 shadow-xl">
+                <a href="#about" class="block font-bold">About</a>
+                <a href="#business" class="block font-bold text-blue-600">Business</a>
+                <a href="#projects" class="block font-bold">Projects</a>
+                <a href="#certificates" class="block font-bold">Certificates</a>
+                <a href="#skills" class="block font-bold">Skills</a>
+            </div>
         </nav>
 
-        <header class="hero pt-24 pb-16 md:pt-32 md:pb-24 text-center transition-colors duration-300">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Yash Vardhan Pandey</h1>
-                <h2 class="text-2xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400 mb-6">Full-Stack Developer & Backend Engineer</h2>
-                <p class="tagline text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">Building scalable backend systems and dynamic user experiences, from server logic to pixel-perfect UIs.</p>
-                <div class="hero-buttons flex justify-center space-x-4">
-                    <a href="#projects" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition transform hover:-translate-y-1">View My Projects</a>
-                    <div class="relative inline-block text-left">
-                        <button id="resume-button" class="btn btn-secondary bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-bold py-3 px-6 rounded-lg shadow inline-flex items-center transition transform hover:-translate-y-1">
+        <header class="hero pt-28 pb-16 md:pt-40 md:pb-24 text-center transition-colors duration-300">
+            <div class="container mx-auto px-4 mt-8">
+                <h1 class="hero-title text-4xl md:text-5xl font-extrabold mb-4">Yash Vardhan Pandey</h1>
+                <h2 class="hero-subtitle text-xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400 mb-6">Full-Stack Engineer & Founder of VardhanFlow</h2>
+                <p class="tagline text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 px-2">Architecting enterprise-grade digital ecosystems and scaling SaaS solutions from the ground up.</p>
+                <div class="hero-buttons flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#business" class="w-full sm:w-auto btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1">View My Venture</a>
+                    
+                    <div class="relative inline-block text-left w-full sm:w-auto">
+                        <button id="resume-button" class="w-full sm:w-auto btn btn-secondary bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-bold py-3.5 px-8 rounded-lg shadow inline-flex justify-center items-center transition transform hover:-translate-y-1">
                             <span>Resume</span>
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="resume-dropdown" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 hidden z-20">
+                        <div id="resume-dropdown" class="origin-top absolute right-0 mt-2 w-full sm:w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 hidden z-20">
                             <div class="py-2 px-2 space-y-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block w-full text-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" role="menuitem">View Resume</a>
-                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block w-full text-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" role="menuitem">Download Resume</a>
+                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block w-full text-center px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md font-bold" role="menuitem">View Resume</a>
+                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block w-full text-center px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md font-bold" role="menuitem">Download Resume</a>
                             </div>
                         </div>
                     </div>
@@ -63,11 +82,56 @@
 
         <main>
             <section id="about" class="container mx-auto px-4 py-16">
-                <h2 class="section-title text-3xl font-bold text-center mb-12">About Me</h2>
-                <div class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 space-y-6 leading-relaxed">
-                    <p>I'm a third-year BCA student with a deep passion for building complete, functional web applications. My journey into tech is driven by a desire to solve real-world problems through clean, efficient code. My coursework and personal projects have provided a strong foundation in both the art of creating intuitive user interfaces and the science of architecting robust backend systems.</p>
-                    <p>I thrive on challenges and am constantly exploring new technologies. My project work, especially with the MERN stack and AI integration, demonstrates my ability to take a concept from idea to deployment.</p>
-                    <p>I am actively seeking opportunities to contribute to a forward-thinking team, where I can apply my skills and continue to grow as a software engineer.</p>
+                <h2 class="section-title text-3xl font-bold text-center mb-12">The Journey</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        <p>I started my journey as a <strong>BCA student</strong> with a hunger to go beyond the syllabus. While most were learning syntax, I was obsessing over how to solve friction in local commerce.</p>
+                        <p>This led to the creation of <strong>VardhanFlow</strong>—my first step from developer to founder. I believe engineering isn't just about writing code; it's about building "Flow" in businesses that need it most.</p>
+                        <p>From winning hackathons like <strong>Lion's Den 2.0</strong> to launching a live SaaS, I've proven that a student with a vision can engineer a business ecosystem.</p>
+                    </div>
+                    <div class="bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl border-l-4 border-blue-600 shadow-inner">
+                        <h4 class="text-blue-600 dark:text-blue-400 font-bold mb-4 uppercase tracking-widest text-sm">Key Milestones</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-graduation-cap text-blue-600 mt-1"></i>
+                                <span class="font-bold">3rd Year BCA @ Shambhunath Group</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-trophy text-blue-600 mt-1"></i>
+                                <span class="font-bold">Winner: Lion's Den 2.0 (Entrepreneurship)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-rocket text-blue-600 mt-1"></i>
+                                <span class="font-bold">Launched VardhanFlow SaaS Live</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="business" class="container mx-auto px-4 py-16 bg-gray-100 dark:bg-gray-800/50 rounded-3xl mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">My Business Venture</h2>
+                    <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
+                </div>
+                <div class="max-w-5xl mx-auto bg-white dark:bg-gray-900 business-glow rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="p-10 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Active SaaS</span>
+                            </div>
+                            <h3 class="text-3xl font-black mb-4">VardhanFlow</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                                An enterprise-grade digital orchestration platform. Our flagship <strong>Smart QR Menu SaaS</strong> is designed for high-end hospitality brands to eliminate friction and maximize efficiency.
+                            </p>
+                            <a href="https://vardhan-flow-website.vercel.app/" target="_blank" class="w-full sm:w-fit text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-xl transition shadow-lg hover:scale-105 active:scale-95">
+                                Visit www.vardhanflow.com
+                            </a>
+                        </div>
+                        <div class="relative bg-gray-200 dark:bg-gray-800 flex items-center justify-center p-12">
+                             <div class="text-5xl md:text-6xl font-black text-gray-400 opacity-20 italic">VARDHANFLOW</div>
+                        </div>
+                    </div>
                 </div>
             </section>
             
@@ -195,7 +259,7 @@
             <section id="certificates" class="container mx-auto px-4 py-16 text-center">
                 <h2 class="section-title text-3xl font-bold mb-8">Certificates & Achievements</h2>
                 <p class="mb-8 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">I actively participate in competitions and complete certifications to sharpen my skills and validate my knowledge. Click below to view my recognitions.</p>
-                <button onclick="showView('certificates-view')" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1">View My Certificates & Achievements</button>
+                <button onclick="showView('certificates-view')" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-10 rounded-lg shadow-lg transition transform hover:-translate-y-1">View My Certificates & Achievements</button>
             </section>
 
             <section id="skills" class="container mx-auto px-4 py-16 transition-colors duration-300">
@@ -264,7 +328,7 @@
                     <a href="https://github.com/pndeyyash-cmd" target="_blank" aria-label="GitHub" class="hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-github fa-2x"></i></a>
                     <a href="https://www.youtube.com/channel/UCS8CRyAxM0zG6hRsVUNhcEw" target="_blank" aria-label="YouTube" class="hover:text-red-500 transition transform hover:scale-110"><i class="fab fa-youtube fa-2x"></i></a>
                 </div>
-                <p class="copyright text-gray-400 text-sm">&copy; 2025 Yash Vardhan Pandey. All rights reserved.</p>
+                <p class="copyright text-gray-400 text-sm">&copy; 2026 Yash Vardhan Pandey. All rights reserved.</p>
             </div>
         </footer>
     </div>
@@ -344,12 +408,12 @@
             <div class="inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl w-full relative opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                  <div class="absolute top-4 right-4 flex space-x-4 z-10 p-2 bg-gray-900/80 rounded-full">
                     <a id="modal-download-link" href="#" download class="text-gray-300 hover:text-white transition-colors duration-200" title="Download Certificate">
-                       <i class="fas fa-download fa-lg"></i>
+                        <i class="fas fa-download fa-lg"></i>
                     </a>
                     <button onclick="closeModal()" type="button" class="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none" title="Close">
-                       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                       </svg>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                </div>
                 <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -372,6 +436,14 @@
     </div>
 
     <script>
+        // MOBILE MENU LOGIC
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+
+        // VIEW TOGGLE LOGIC
         function showView(viewId) {
             const mainView = document.getElementById('main-view');
             const certificatesView = document.getElementById('certificates-view');
@@ -396,11 +468,13 @@
             }
         }
 
+        // RESUME DROPDOWN LOGIC
         document.addEventListener('DOMContentLoaded', function() {
             const resumeButton = document.getElementById('resume-button');
             const resumeDropdown = document.getElementById('resume-dropdown');
 
-            resumeButton.addEventListener('click', function() {
+            resumeButton.addEventListener('click', function(e) {
+                e.stopPropagation();
                 resumeDropdown.classList.toggle('hidden');
             });
 
@@ -411,6 +485,7 @@
             });
         });
 
+        // MODAL LOGIC
         const modal = document.getElementById('certificate-modal');
         const modalImage = document.getElementById('modal-image');
         const modalTitle = document.getElementById('modal-title');
