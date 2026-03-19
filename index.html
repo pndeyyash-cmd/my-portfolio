@@ -20,7 +20,7 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
         
-        /* RESPONSIVE TYPOGRAPHY FIX (No more overlapping text) */
+        /* RESPONSIVE TYPOGRAPHY FIX */
         .hero-title { line-height: 1.1; word-spacing: -2px; }
         @media (max-width: 640px) {
             .hero-title { font-size: 2.75rem !important; line-height: 1.15 !important; margin-bottom: 0.75rem; }
@@ -28,59 +28,59 @@
         }
     </style>
 </head>
-<body class="text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300 relative min-h-screen">
+<body class="bg-gray-950 text-gray-100 font-sans transition-colors duration-300 relative min-h-screen">
 
-    <div class="fixed inset-0 z-[-1] bg-gray-50 dark:bg-gray-950">
-        <div class="absolute inset-0 bg-cover bg-center opacity-15 dark:opacity-20" style="background-image: url('bg.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-gray-50/80 to-gray-50 dark:from-gray-950/50 dark:via-gray-950/80 dark:to-gray-950"></div>
+    <div class="fixed inset-0 z-[-1] bg-[#050505]">
+        <div class="absolute inset-0 bg-cover bg-center opacity-40 md:opacity-50" style="background-image: url('./bg.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/40 via-[#050505]/70 to-[#050505]"></div>
     </div>
 
     <div id="main-view" class="view">
         
-        <nav class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md fixed w-full z-50 top-0 h-[65px] flex items-center">
+        <nav class="bg-gray-900/80 backdrop-blur-lg shadow-md fixed w-full z-50 top-0 h-[65px] flex items-center border-b border-gray-800">
             <div class="container mx-auto px-4 flex justify-between items-center w-full">
-                <a href="#" class="text-xl font-black text-blue-600 dark:text-blue-400 tracking-tighter">Yash Vardhan Pandey</a>
+                <a href="#" class="text-xl font-black text-blue-400 tracking-tighter">Yash Vardhan Pandey</a>
                 
-                <ul class="hidden md:flex space-x-6 font-bold text-sm">
-                    <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
-                    <li><a href="#business" class="text-blue-600 transition">Business</a></li>
-                    <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
-                    <li><a href="#certificates" class="hover:text-blue-600 transition">Certificates</a></li>
-                    <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+                <ul class="hidden md:flex space-x-6 font-bold text-sm text-gray-300">
+                    <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+                    <li><a href="#business" class="text-blue-400 transition">Business</a></li>
+                    <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+                    <li><a href="#certificates" class="hover:text-blue-400 transition">Certificates</a></li>
+                    <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
                 </ul>
                 
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 dark:text-white focus:outline-none">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white focus:outline-none hover:text-blue-400 transition">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
 
-        <div id="mobile-nav" class="hidden md:hidden fixed top-[65px] left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 shadow-2xl flex-col z-[49]">
-            <a href="#about" class="block px-6 py-4 font-bold border-b border-gray-100 dark:border-gray-800 mobile-link">About</a>
-            <a href="#business" class="block px-6 py-4 font-black text-blue-600 border-b border-gray-100 dark:border-gray-800 mobile-link">Business Venture</a>
-            <a href="#projects" class="block px-6 py-4 font-bold border-b border-gray-100 dark:border-gray-800 mobile-link">Projects</a>
-            <a href="#certificates" class="block px-6 py-4 font-bold border-b border-gray-100 dark:border-gray-800 mobile-link">Certificates</a>
-            <a href="#skills" class="block px-6 py-4 font-bold mobile-link">Skills</a>
+        <div id="mobile-nav" class="hidden md:hidden fixed top-[65px] left-0 w-full bg-gray-900/95 backdrop-blur-xl border-b border-gray-800 shadow-2xl flex-col z-[49]">
+            <a href="#about" class="block px-6 py-4 font-bold text-gray-200 border-b border-gray-800 mobile-link hover:text-blue-400">About</a>
+            <a href="#business" class="block px-6 py-4 font-black text-blue-400 border-b border-gray-800 mobile-link">Business Venture</a>
+            <a href="#projects" class="block px-6 py-4 font-bold text-gray-200 border-b border-gray-800 mobile-link hover:text-blue-400">Projects</a>
+            <a href="#certificates" class="block px-6 py-4 font-bold text-gray-200 border-b border-gray-800 mobile-link hover:text-blue-400">Certificates</a>
+            <a href="#skills" class="block px-6 py-4 font-bold text-gray-200 mobile-link hover:text-blue-400">Skills</a>
         </div>
 
         <header class="hero pt-32 pb-16 md:pt-48 md:pb-24 text-center transition-colors duration-300">
             <div class="container mx-auto px-4 mt-4 md:mt-8">
-                <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight leading-tight">Yash Vardhan Pandey</h1>
-                <h2 class="hero-subtitle text-xl sm:text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-6 leading-snug px-2">Full-Stack Engineer & Founder of VardhanFlow</h2>
-                <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 px-2 leading-relaxed">Architecting enterprise-grade digital ecosystems and scaling SaaS solutions from the ground up.</p>
+                <h1 class="hero-title text-white text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight leading-tight drop-shadow-lg">Yash Vardhan Pandey</h1>
+                <h2 class="hero-subtitle text-xl sm:text-2xl md:text-3xl font-bold text-blue-400 mb-6 leading-snug px-2 drop-shadow-md">Full-Stack Engineer & Founder of VardhanFlow</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 px-2 leading-relaxed drop-shadow-md">Architecting enterprise-grade digital ecosystems and scaling SaaS solutions from the ground up.</p>
                 
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="#business" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-xl shadow-lg transition transform hover:-translate-y-1">View My Venture</a>
                     
                     <div class="relative inline-block text-left w-full sm:w-auto">
-                        <button id="resume-button" class="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white font-bold py-3.5 px-8 rounded-xl shadow inline-flex justify-center items-center transition transform hover:-translate-y-1">
+                        <button id="resume-button" class="w-full sm:w-auto bg-gray-800/80 backdrop-blur-sm hover:bg-gray-700 text-white border border-gray-600 font-bold py-3.5 px-8 rounded-xl shadow-lg inline-flex justify-center items-center transition transform hover:-translate-y-1">
                             <span>Resume</span>
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="resume-dropdown" class="origin-top absolute right-0 mt-2 w-full sm:w-56 rounded-md shadow-2xl bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 hidden z-20 border border-gray-200 dark:border-gray-700">
+                        <div id="resume-dropdown" class="origin-top absolute right-0 mt-2 w-full sm:w-56 rounded-md shadow-2xl bg-gray-800 ring-1 ring-black ring-opacity-5 hidden z-20 border border-gray-700">
                             <div class="py-2 px-2 space-y-1" role="menu">
-                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block w-full text-center px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md font-bold">View Resume</a>
-                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block w-full text-center px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md font-bold">Download Resume</a>
+                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" target="_blank" class="block w-full text-center px-4 py-3 text-sm text-gray-200 hover:bg-gray-700 hover:text-white rounded-md font-bold">View Resume</a>
+                                <a href="Yash_Vardhan_Pandey_Resume_Updated.pdf" download class="block w-full text-center px-4 py-3 text-sm text-gray-200 hover:bg-gray-700 hover:text-white rounded-md font-bold">Download Resume</a>
                             </div>
                         </div>
                     </div>
@@ -90,26 +90,26 @@
 
         <main>
             <section id="about" class="container mx-auto px-4 py-16">
-                <h2 class="text-3xl font-black text-center mb-12">The Journey</h2>
+                <h2 class="text-3xl font-black text-center mb-12 text-white">The Journey</h2>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed bg-white/50 dark:bg-gray-800/50 p-6 md:p-8 rounded-2xl backdrop-blur-sm border border-gray-200 dark:border-gray-700">
+                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed bg-gray-900/70 p-6 md:p-8 rounded-2xl backdrop-blur-md border border-gray-800 shadow-xl">
                         <p>I started my journey as a <strong>BCA student</strong> with a hunger to go beyond the syllabus. While most were learning syntax, I was obsessing over how to solve friction in local commerce.</p>
                         <p>This led to the creation of <strong>VardhanFlow</strong>—my first step from developer to founder. I believe engineering isn't just about writing code; it's about building "Flow" in businesses that need it most.</p>
                         <p>From winning hackathons like <strong>Lion's Den 2.0</strong> to launching a live SaaS, I've proven that a student with a vision can engineer a business ecosystem.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl border-l-4 border-blue-600 shadow-xl">
-                        <h4 class="text-blue-600 dark:text-blue-400 font-bold mb-6 uppercase tracking-widest text-sm">Key Milestones</h4>
-                        <ul class="space-y-6">
+                    <div class="bg-gray-800/90 backdrop-blur-sm p-8 rounded-2xl border-l-4 border-blue-500 shadow-2xl">
+                        <h4 class="text-blue-400 font-bold mb-6 uppercase tracking-widest text-sm">Key Milestones</h4>
+                        <ul class="space-y-6 text-gray-200">
                             <li class="flex items-center gap-4">
-                                <div class="bg-blue-100 dark:bg-gray-700 p-3 rounded-lg"><i class="fas fa-graduation-cap text-blue-600 text-lg"></i></div>
+                                <div class="bg-gray-700 p-3 rounded-lg"><i class="fas fa-graduation-cap text-blue-400 text-lg"></i></div>
                                 <span class="font-bold text-sm md:text-base">3rd Year BCA @ Shambhunath Group</span>
                             </li>
                             <li class="flex items-center gap-4">
-                                <div class="bg-blue-100 dark:bg-gray-700 p-3 rounded-lg"><i class="fas fa-trophy text-blue-600 text-lg"></i></div>
+                                <div class="bg-gray-700 p-3 rounded-lg"><i class="fas fa-trophy text-blue-400 text-lg"></i></div>
                                 <span class="font-bold text-sm md:text-base">Winner: Lion's Den 2.0</span>
                             </li>
                             <li class="flex items-center gap-4">
-                                <div class="bg-blue-100 dark:bg-gray-700 p-3 rounded-lg"><i class="fas fa-rocket text-blue-600 text-lg"></i></div>
+                                <div class="bg-gray-700 p-3 rounded-lg"><i class="fas fa-rocket text-blue-400 text-lg"></i></div>
                                 <span class="font-bold text-sm md:text-base">Launched VardhanFlow SaaS Live</span>
                             </li>
                         </ul>
@@ -117,137 +117,137 @@
                 </div>
             </section>
 
-            <section id="business" class="container mx-auto px-4 py-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-3xl mb-16 shadow-lg border border-gray-200 dark:border-gray-700">
+            <section id="business" class="container mx-auto px-4 py-16 bg-gray-900/80 backdrop-blur-md rounded-3xl mb-16 shadow-2xl border border-gray-800">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-black mb-4">My Business Venture</h2>
+                    <h2 class="text-3xl font-black mb-4 text-white">My Business Venture</h2>
                     <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
                 </div>
-                <div class="max-w-5xl mx-auto bg-white dark:bg-gray-900 business-glow rounded-[2rem] overflow-hidden shadow-2xl">
+                <div class="max-w-5xl mx-auto bg-gray-950 business-glow rounded-[2rem] overflow-hidden shadow-2xl">
                     <div class="grid grid-cols-1 lg:grid-cols-2">
                         <div class="p-8 md:p-12 flex flex-col justify-center">
                             <div class="flex items-center gap-3 mb-6">
-                                <span class="bg-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Active SaaS</span>
+                                <span class="bg-blue-600/20 border border-blue-500/30 text-blue-400 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Active SaaS</span>
                             </div>
-                            <h3 class="text-3xl md:text-4xl font-black mb-4">VardhanFlow</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                                An enterprise-grade digital orchestration platform. Our flagship <strong>Smart QR Menu SaaS</strong> is designed for high-end hospitality brands to eliminate friction and maximize efficiency.
+                            <h3 class="text-3xl md:text-4xl font-black mb-4 text-white">VardhanFlow</h3>
+                            <p class="text-gray-300 mb-8 leading-relaxed">
+                                An enterprise-grade digital orchestration platform. Our flagship <strong class="text-white">Smart QR Menu SaaS</strong> is designed for high-end hospitality brands to eliminate friction and maximize efficiency.
                             </p>
                             <a href="https://vardhan-flow-website.vercel.app/" target="_blank" class="w-full sm:w-fit text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-xl transition shadow-lg hover:scale-105 active:scale-95">
                                 Visit www.vardhanflow.com
                             </a>
                         </div>
-                        <div class="relative bg-gray-100 dark:bg-gray-950 flex items-center justify-center p-12 border-t lg:border-t-0 lg:border-l border-gray-200 dark:border-gray-800 min-h-[250px]">
-                             <div class="text-4xl md:text-6xl font-black text-gray-400 opacity-20 italic text-center break-words">VARDHANFLOW</div>
+                        <div class="relative bg-gray-900 flex items-center justify-center p-12 border-t lg:border-t-0 lg:border-l border-gray-800 min-h-[250px]">
+                             <div class="text-4xl md:text-6xl font-black text-gray-600 opacity-20 italic text-center break-words">VARDHANFLOW</div>
                         </div>
                     </div>
                 </div>
             </section>
             
             <section id="projects" class="container mx-auto px-4 py-16 transition-colors duration-300">
-                <h2 class="text-3xl font-black text-center mb-12">Featured Projects</h2>
+                <h2 class="text-3xl font-black text-center mb-12 text-white">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
                     
-                    <div class="flex flex-col h-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col h-full bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">SentinelFace: Biometric Terminal</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium mb-4 text-sm">High-security attendance system.</p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">Features real-time blink detection (EAR monitoring) for liveness, Haversine GPS locking, and a Python/Flask reverse-match anti-fraud backend.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">SentinelFace: Biometric Terminal</h3>
+                            <p class="text-blue-400 font-medium mb-4 text-sm">High-security attendance system.</p>
+                            <p class="text-gray-300 mb-4 text-sm flex-grow">Features real-time blink detection (EAR monitoring) for liveness, Haversine GPS locking, and a Python/Flask reverse-match anti-fraud backend.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">React.js</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Python</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Flask</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">MongoDB</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">React.js</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Python</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Flask</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">MongoDB</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <a href="https://face-attendance-frontend-weld.vercel.app/" target="_blank" class="flex-grow text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Live Demo</a>
-                                <a href="https://github.com/pndeyyash-cmd/face-attendance-frontend.git" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Frontend</a>
-                                <a href="https://github.com/pndeyyash-cmd/face-attendance-backend.git" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Backend</a>
+                                <a href="https://github.com/pndeyyash-cmd/face-attendance-frontend.git" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Frontend</a>
+                                <a href="https://github.com/pndeyyash-cmd/face-attendance-backend.git" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Backend</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col h-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col h-full bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Vardhan's Wear</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium mb-4 text-sm">Mobile-first MERN e-commerce platform.</p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">Features secure JWT authentication, dynamic cart validation, protected Admin Dashboard, and Razorpay gateway integration.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Vardhan's Wear</h3>
+                            <p class="text-blue-400 font-medium mb-4 text-sm">Mobile-first MERN e-commerce platform.</p>
+                            <p class="text-gray-300 mb-4 text-sm flex-grow">Features secure JWT authentication, dynamic cart validation, protected Admin Dashboard, and Razorpay gateway integration.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">React</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Node.js</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Express</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Razorpay</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">React</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Node.js</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Express</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Razorpay</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <a href="https://vardhan-wears.vercel.app" target="_blank" class="flex-grow text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Live Demo</a>
-                                <a href="https://github.com/pndeyyash-cmd/Vardhan-Wears-frontend" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Code</a>
+                                <a href="https://github.com/pndeyyash-cmd/Vardhan-Wears-frontend" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Code</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col h-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col h-full bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                         <div class="p-6 flex flex-col flex-grow">
-                             <h3 class="text-xl font-bold mb-2">Neighborly</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium mb-4 text-sm">Hyperlocal community assistance app.</p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">Features a live community board, an integrated chat system powered by Socket.IO for instant coordination, and a "Karma" reputation system.</p>
+                             <h3 class="text-xl font-bold mb-2 text-white">Neighborly</h3>
+                            <p class="text-blue-400 font-medium mb-4 text-sm">Hyperlocal community assistance app.</p>
+                            <p class="text-gray-300 mb-4 text-sm flex-grow">Features a live community board, an integrated chat system powered by Socket.IO for instant coordination, and a "Karma" reputation system.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">React</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Node.js</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Socket.IO</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">React</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Node.js</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Socket.IO</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <a href="https://neighborly-app-one.vercel.app/" target="_blank" class="flex-grow text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Live Demo</a>
-                                <a href="https://github.com/pndeyyash-cmd/neighborly-app" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">GitHub</a>
+                                <a href="https://github.com/pndeyyash-cmd/neighborly-app" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">GitHub</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col h-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col h-full bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Neha's Restaurant</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium mb-4 text-sm">Complete digital booking & admin solution.</p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">Customer-facing UI for reservations, alongside a secure admin panel with 2FA (Twilio OTP) for full CRUD management of inventory.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Neha's Restaurant</h3>
+                            <p class="text-blue-400 font-medium mb-4 text-sm">Complete digital booking & admin solution.</p>
+                            <p class="text-gray-300 mb-4 text-sm flex-grow">Customer-facing UI for reservations, alongside a secure admin panel with 2FA (Twilio OTP) for full CRUD management of inventory.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">React</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Node.js</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Twilio</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">React</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Node.js</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Twilio</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <a href="https://nehas-restaurant-frontend.vercel.app" target="_blank" class="flex-grow text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Live Demo</a>
-                                <a href="https://github.com/pndeyyash-cmd/nehas-restaurant-frontend" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Code</a>
+                                <a href="https://github.com/pndeyyash-cmd/nehas-restaurant-frontend" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Code</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col h-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col h-full bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">AI Content Detector</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium mb-4 text-sm">Detect AI-generated text.</p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">Modern UI for text analysis supporting direct input and file uploads (PDF, Word). Leverages a Python/Flask backend for scoring.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">AI Content Detector</h3>
+                            <p class="text-blue-400 font-medium mb-4 text-sm">Detect AI-generated text.</p>
+                            <p class="text-gray-300 mb-4 text-sm flex-grow">Modern UI for text analysis supporting direct input and file uploads (PDF, Word). Leverages a Python/Flask backend for scoring.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Next.js</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Flask</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">TypeScript</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Next.js</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Flask</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">TypeScript</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <a href="https://ai-content-detector-phi.vercel.app" target="_blank" class="flex-grow text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Live Demo</a>
-                                <a href="https://github.com/pndeyyash-cmd/ai-content-detector" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">GitHub</a>
+                                <a href="https://github.com/pndeyyash-cmd/ai-content-detector" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">GitHub</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col h-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col h-full bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">QR Code Generator</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-medium mb-4 text-sm">Real-time URL to QR converter.</p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">Single-page frontend application featuring real-time QR code generation and instant image download functionality.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">QR Code Generator</h3>
+                            <p class="text-blue-400 font-medium mb-4 text-sm">Real-time URL to QR converter.</p>
+                            <p class="text-gray-300 mb-4 text-sm flex-grow">Single-page frontend application featuring real-time QR code generation and instant image download functionality.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">HTML5</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">Tailwind CSS</span>
-                                <span class="px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-xs rounded-md font-semibold">JavaScript</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">HTML5</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">Tailwind CSS</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-300 border border-gray-700 text-xs rounded-md font-semibold">JavaScript</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mt-auto">
                                 <a href="https://pndeyyash-cmd.github.io/qr-code-generator/" target="_blank" class="flex-grow text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">Live Demo</a>
-                                <a href="https://github.com/pndeyyash-cmd/qr-code-generator" target="_blank" class="flex-grow text-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">GitHub</a>
+                                <a href="https://github.com/pndeyyash-cmd/qr-code-generator" target="_blank" class="flex-grow text-center bg-gray-700 hover:bg-gray-600 text-white py-2.5 px-3 rounded-lg text-sm font-bold transition">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -256,51 +256,51 @@
             </section>
             
             <section id="certificates" class="container mx-auto px-4 py-16 text-center">
-                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-10 rounded-3xl shadow-lg border border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-black mb-6">Certificates & Achievements</h2>
-                    <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">I actively participate in competitions and complete certifications to sharpen my skills and validate my knowledge.</p>
+                <div class="bg-gray-900/80 backdrop-blur-md p-10 rounded-3xl shadow-xl border border-gray-800 max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-black mb-6 text-white">Certificates & Achievements</h2>
+                    <p class="mb-8 text-lg text-gray-300">I actively participate in competitions and complete certifications to sharpen my skills and validate my knowledge.</p>
                     <button onclick="showView('certificates-view')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-10 rounded-xl shadow-lg transition transform hover:-translate-y-1">View My Recognitions</button>
                 </div>
             </section>
 
             <section id="skills" class="container mx-auto px-4 py-16 transition-colors duration-300">
-                <h2 class="text-3xl font-black text-center mb-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md py-4 rounded-xl shadow-sm max-w-sm mx-auto border border-gray-200 dark:border-gray-700">My Tech Stack</h2>
+                <h2 class="text-3xl font-black text-center mb-12 bg-gray-900/80 backdrop-blur-md py-4 rounded-xl shadow-lg max-w-sm mx-auto border border-gray-800 text-white">My Tech Stack</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                      <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b border-gray-200 dark:border-gray-700 pb-2">Frontend</h3>
+                      <div class="bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Frontend</h3>
                         <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">HTML5/CSS3</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">JavaScript</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">TypeScript</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">React.js</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Next.js</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Tailwind CSS</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">HTML5/CSS3</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">JavaScript</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">TypeScript</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">React.js</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Next.js</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Tailwind CSS</span>
                         </div>
                     </div>
-                    <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b border-gray-200 dark:border-gray-700 pb-2">Backend</h3>
+                    <div class="bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Backend</h3>
                         <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Node.js</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Express.js</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Flask</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">REST APIs</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Node.js</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Express.js</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Flask</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">REST APIs</span>
                         </div>
                     </div>
-                    <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b border-gray-200 dark:border-gray-700 pb-2">Databases</h3>
+                    <div class="bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Databases</h3>
                         <div class="flex flex-wrap justify-center gap-2">
-                             <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">MongoDB</span>
-                             <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">MySQL</span>
-                             <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">SQLite</span>
+                             <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">MongoDB</span>
+                             <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">MySQL</span>
+                             <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">SQLite</span>
                         </div>
                     </div>
-                    <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
-                        <h3 class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b border-gray-200 dark:border-gray-700 pb-2">Tools & Langs</h3>
+                    <div class="bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Tools & Langs</h3>
                         <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Git/GitHub</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Vercel/Render</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Postman</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs font-bold shadow-sm">Java/C++</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Git/GitHub</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Vercel/Render</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Postman</span>
+                            <span class="px-3 py-1.5 bg-gray-900 text-gray-300 border border-gray-700 rounded-lg text-xs font-bold shadow-sm">Java/C++</span>
                         </div>
                     </div>
                 </div>
@@ -310,77 +310,77 @@
 
         <footer id="contact" class="bg-gray-950 text-white py-12 text-center border-t border-gray-800">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-black mb-8">Let's Connect</h2>
+                <h2 class="text-3xl font-black mb-8 text-white">Let's Connect</h2>
                 <div class="flex justify-center space-x-8 mb-8">
                     <a href="mailto:pndeyyash@gmail.com" aria-label="Email" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fas fa-envelope fa-2x"></i></a>
                     <a href="https://www.linkedin.com/in/yash-pandey-fullstack/" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-linkedin fa-2x"></i></a>
                     <a href="https://github.com/pndeyyash-cmd" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-github fa-2x"></i></a>
                     <a href="https://www.youtube.com/channel/UCS8CRyAxM0zG6hRsVUNhcEw" target="_blank" aria-label="YouTube" class="text-gray-400 hover:text-red-500 transition transform hover:scale-110"><i class="fab fa-youtube fa-2x"></i></a>
                 </div>
-                <p class="text-gray-500 text-xs font-bold uppercase tracking-[0.2em]">&copy; 2026 VardhanFlow Engineering. All rights reserved.</p>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">&copy; 2026 VardhanFlow Engineering. All rights reserved.</p>
             </div>
         </footer>
     </div>
 
-    <div id="certificates-view" class="view hidden fixed inset-0 w-full h-full bg-gray-900/95 overflow-y-auto z-20 transition-opacity duration-500" style="opacity: 0;">
+    <div id="certificates-view" class="view hidden fixed inset-0 w-full h-full bg-gray-950 overflow-y-auto z-[60]" style="opacity: 0;">
          <div class="container mx-auto px-4 py-12">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
-                <h2 class="text-3xl md:text-4xl font-black text-white text-center">Certificates & Achievements</h2>
-                <button onclick="showView('main-view')" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2.5 px-6 rounded-lg shadow transition flex items-center">
+                <h2 class="text-3xl md:text-4xl font-black text-white text-center tracking-tight">Certificates & Achievements</h2>
+                <button onclick="showView('main-view')" class="bg-gray-800 hover:bg-gray-700 border border-gray-600 text-white font-bold py-2.5 px-6 rounded-lg shadow-xl transition flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Back to Portfolio
                 </button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('codealpha_certificate.png', 'Virtual Internship Program - CodeAlpha', 'Certificate of Completion for the Virtual Internship Program in Full Stack Development.')">
+                <div class="bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden hover:shadow-blue-900/20 transition duration-300 cursor-pointer group" onclick="openModal('codealpha_certificate.png', 'Virtual Internship Program - CodeAlpha', 'Certificate of Completion for the Virtual Internship Program in Full Stack Development.')">
                     <div class="relative overflow-hidden">
                         <img src="codealpha_certificate.png" alt="CodeAlpha" class="w-full h-56 object-cover object-center transition duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
                             <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">CodeAlpha Full-Stack Internship</h3>
+                    <div class="p-6 border-t border-gray-800">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">CodeAlpha Full-Stack Internship</h3>
                         <p class="text-gray-400 text-sm">Virtual Internship Program Completion.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('lionsden.jpg', 'Lion\'s Den 2.0 - 1st Position', 'Awarded for securing the 1st position in the Lion\'s Den 2.0 event.')">
+                <div class="bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden hover:shadow-blue-900/20 transition duration-300 cursor-pointer group" onclick="openModal('lionsden.jpg', 'Lion\'s Den 2.0 - 1st Position', 'Awarded for securing the 1st position in the Lion\'s Den 2.0 event.')">
                     <div class="relative overflow-hidden">
                         <img src="lionsden.jpg" alt="Lion's Den" class="w-full h-56 object-cover object-center transition duration-500 group-hover:scale-110">
-                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300 flex items-center justify-center">
+                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
                             <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Lion's Den 2.0 - 1st Position</h3>
+                    <div class="p-6 border-t border-gray-800">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">Lion's Den 2.0 - 1st Position</h3>
                         <p class="text-gray-400 text-sm">Awarded for securing 1st place.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('CODESTORM.jpg', 'Codestorm 25 - Certificate of Achievement', 'Competitive coding event participation.')">
+                <div class="bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden hover:shadow-blue-900/20 transition duration-300 cursor-pointer group" onclick="openModal('CODESTORM.jpg', 'Codestorm 25 - Certificate of Achievement', 'Competitive coding event participation.')">
                      <div class="relative overflow-hidden">
                         <img src="CODESTORM.jpg" alt="Codestorm" class="w-full h-56 object-cover object-top transition duration-500 group-hover:scale-110">
-                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300 flex items-center justify-center">
+                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
                             <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Codestorm 25 Achievement</h3>
+                    <div class="p-6 border-t border-gray-800">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">Codestorm 25 Achievement</h3>
                         <p class="text-gray-400 text-sm">Competitive coding participation.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer group" onclick="openModal('starlightshowdown.jpg', 'SlideStar Showdown - 1st Position', '1st place in presentation competition.')">
+                <div class="bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden hover:shadow-blue-900/20 transition duration-300 cursor-pointer group" onclick="openModal('starlightshowdown.jpg', 'SlideStar Showdown - 1st Position', '1st place in presentation competition.')">
                      <div class="relative overflow-hidden">
                         <img src="starlightshowdown.jpg" alt="SlideStar" class="w-full h-56 object-cover object-center transition duration-500 group-hover:scale-110">
-                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300 flex items-center justify-center">
+                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
                             <i class="fas fa-expand text-white opacity-0 group-hover:opacity-100 transition duration-300 fa-2x"></i>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">SlideStar Showdown 1st Place</h3>
+                    <div class="p-6 border-t border-gray-800">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">SlideStar Showdown 1st Place</h3>
                         <p class="text-gray-400 text-sm">Presentation competition winner.</p>
                     </div>
                 </div>
@@ -388,21 +388,21 @@
         </div>
     </div>
 
-    <div id="certificate-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div id="certificate-modal" class="fixed inset-0 z-[70] hidden overflow-y-auto">
         <div class="flex items-center justify-center min-h-screen p-4 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 bg-black/90 transition-opacity opacity-0" onclick="closeModal()"></div>
+            <div class="fixed inset-0 bg-black/95 transition-opacity opacity-0" onclick="closeModal()"></div>
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
             <div class="inline-block align-bottom bg-gray-900 rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl w-full relative opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95 border border-gray-700">
-                 <div class="absolute top-4 right-4 flex space-x-4 z-10 p-2 bg-gray-800/80 rounded-full border border-gray-600">
-                    <a id="modal-download-link" href="#" download class="text-gray-300 hover:text-white transition-colors p-1">
+                 <div class="absolute top-4 right-4 flex space-x-4 z-10 p-2 bg-gray-800/90 rounded-full border border-gray-600 shadow-lg">
+                    <a id="modal-download-link" href="#" download class="text-gray-300 hover:text-white transition-colors p-2">
                         <i class="fas fa-download fa-lg"></i>
                     </a>
-                    <button onclick="closeModal()" class="text-gray-300 hover:text-white transition-colors p-1 focus:outline-none">
+                    <button onclick="closeModal()" class="text-gray-300 hover:text-white transition-colors p-2 focus:outline-none">
                         <i class="fas fa-times fa-lg"></i>
                     </button>
                </div>
                 <div class="px-4 pt-5 pb-4 sm:p-6">
-                    <div class="mt-4 w-full flex justify-center bg-black/50 rounded-xl p-2">
+                    <div class="mt-4 w-full flex justify-center bg-black/50 rounded-xl p-4 border border-gray-800">
                         <img id="modal-image" src="" alt="Certificate" class="max-h-[75vh] w-auto object-contain rounded shadow-lg">
                     </div>
                     <div class="mt-6 text-center w-full">
